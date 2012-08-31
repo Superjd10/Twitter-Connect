@@ -26,8 +26,6 @@ $access_token = $connection->getAccessToken($_REQUEST['oauth_verifier']);
 $_SESSION['access_token'] = $access_token;
 
 $user_info = $connection->get('account/verify_credentials'); 
-// Print user's info  
-print_r($user_info);  
 
 mysql_connect('MYSQL_HOST', 'MYSQL_USER', 'MYSQL_PASSWORD');  
 mysql_select_db('MYSQL_DATABASE');
